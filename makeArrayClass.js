@@ -75,6 +75,8 @@ let main = () => {
     console.log('remove vowels from "hello":  ', removeCharacters('hello', vowels));
     let productArr = [1, 3, 9, 4];
     console.log('product array: ', Products(productArr));
+    console.log('string rotation:  ', StringRotation('amazon', 'azonam'));
+    
 
 };
 
@@ -167,8 +169,17 @@ function Products(arr) {
 // [0,0,0,0,0],
 // [0,0,1,1,0]];
 
+
+//12.  String Rotation 
+// Given 2 strings, str1 and str2, write a program that checks if str2 is a rotation of str1.
+// Input: amazon, azonma
+// Output: False  
+// Input: amazon, azonam
+// Output: true
+
 function StringRotation (str1, str2) {
-    
+    let testString = str1 + str1;
+    return (str1.length === str2.length && (str1 + str1).includes(str2));
 }
 
 main();
